@@ -11,31 +11,31 @@ while True:
 
     check,frame = video.read()
 
-    # Modify the input data by:
+    # Modificar los datos de entrada al:
 
-    # 1. Resizing the image
+    # 1. Redimensionar la imagen
 
     img = cv2.resize(frame,(224,224))
 
-    # 2. Converting the image into Numpy array and increase dimension
+    # 2. Convertir la imagen en una matriz Numpy e incrementar la dimensión
 
     test_image = np.array(img, dtype=np.float32)
     test_image = np.expand_dims(test_image, axis=0)
 
-    # 3. Normalizing the image
+    # 3. Normalizar la imagen
     normalised_image = test_image/255.0
 
-    # Predict Result
+    # Predecir el resultado
     prediction = model.predict(normalised_image)
 
-    print("Prediction : ", prediction)
+    print("Predicción: ", prediction)
         
-    cv2.imshow("Result",frame)
+    cv2.imshow("Resultado",frame)
             
     key = cv2.waitKey(1)
 
     if key == 32:
-        print("Closing")
+        print("Cerrando")
         break
 
 video.release()
