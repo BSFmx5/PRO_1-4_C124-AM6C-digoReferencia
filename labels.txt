@@ -1,2 +1,2 @@
-0 Con máscara
-1 Sin máscara
+0 Con mascarilla
+1 Sin mascarilla
