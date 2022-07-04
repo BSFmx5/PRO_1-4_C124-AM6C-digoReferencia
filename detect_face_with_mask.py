@@ -17,7 +17,7 @@ while True:
 
     img = cv2.resize(frame,(224,224))
 
-    # 2. Convertir la imagen en una matriz Numpy e incrementar la dimensión
+    # 2. Convertir la imagen en una arreglo Numpy e incrementar la dimensión
 
     test_image = np.array(img, dtype=np.float32)
     test_image = np.expand_dims(test_image, axis=0)
